@@ -1,0 +1,206 @@
+A web application is a program that runs in your browser. Unlike normal software that you install on your computer, a web application lives on a server somewhere on the internet, and you access it using a browser like Chrome or Firefox.
+When you open a web app, your browser talks to a server. The browser asks for data, and the server sends back a response. This back-and-forth communication is what makes the app interactive.
+
+Examples of web applications include Gmail, Google Docs, Amazon, Hack The Box, and online banking websites.
+
+*Web Applications vs Websites
+
+In the past, websites were mostly static. This means everyone saw the same content, and nothing changed when users interacted with the page. These are called Web 1.0 websites.
+
+Modern websites are actually web applications. They change based on user input, login status, and actions. This is called Web 2.0.
+
+A website mainly shows information.
+A web application allows users to do things.
+
+Web applications:
+Can log users in
+Can store data
+Can show different content to different users
+Can update content without refreshing the page
+
+*Web Applications vs Native Applications
+
+Native applications are installed on your device, like WhatsApp desktop or Microsoft Word.
+
+Web applications:
+Run inside a browser
+Do not need installation
+Work on any operating system
+Are updated in one place on the server
+
+Native applications:
+Are faster
+Have deeper access to the operating system
+Can use device hardware more efficiently
+
+Modern apps sometimes mix both ideas using hybrid or progressive web apps.
+
+Web Application Security Importance
+
+Web applications are exposed to the internet, meaning anyone in the world can interact with them. This makes them a major target for attackers.
+
+If a web application is vulnerable:
+User data can be stolen
+Passwords can leak
+Databases can be accessed
+Servers can be taken over
+
+Because web apps often connect to databases and internal systems, one small mistake can lead to very big damage.
+
+WEB APPLICATION LAYOUT
+
+A web application is made up of multiple parts working together. These parts are organized into infrastructure, components, and architecture.
+
+Web Application Infrastructure
+
+Infrastructure describes how servers and databases are arranged.
+
+Client Server Model
+
+In this model:
+The client is the browser
+The server hosts the application
+
+The browser sends requests.
+The server processes them and sends responses back.
+
+One Server Model
+
+Everything runs on one server:
+Web server
+Application code
+Database
+
+This is easy to set up but very dangerous. If the server is hacked, everything is compromised.
+
+Many Servers One Database
+
+Multiple web servers connect to one database.
+
+This improves security and reliability.
+If one web server is compromised, others may still be safe.
+
+Many Servers Many Databases
+
+Each application has its own database.
+
+This is the most secure and scalable design.
+If one application is hacked, the others are protected.
+
+WEB APPLICATION COMPONENTS
+
+Every web application is made of these components.
+
+Client  
+The browser used by the user.
+
+Web Server  
+Handles HTTP requests. Examples include Apache, NGINX, IIS.
+
+Application Logic  
+The actual code that processes requests and applies rules.
+
+Database  
+Stores user data, passwords, posts, products, etc.
+
+APIs and Services  
+Allow different parts of the app or other apps to communicate.
+
+Third Party Integrations  
+External services like payment gateways or email providers.
+
+WEB APPLICATION ARCHITECTURE
+
+Most web applications follow a three-layer structure.
+
+Presentation Layer
+
+This is what the user sees.
+It includes HTML, CSS, and JavaScript.
+Runs in the browser.
+
+Application Layer
+
+This is the brain of the app.
+It checks permissions.
+It processes requests.
+It decides what data a user is allowed to see.
+
+Data Layer
+
+This is where data lives.
+Databases store and retrieve information.
+The application layer talks to the database, not the user.
+
+FRONT END VS BACK END
+
+Front End
+
+The front end is everything the user can see and touch.
+
+It includes:
+HTML for structure
+CSS for design
+JavaScript for behavior
+
+Front end controls how the app looks and feels.
+A badly optimized front end can make an app feel slow even if the server is fast.
+
+Back End
+
+The back end does the real work.
+
+Main jobs performed by back end components:
+
+1. Handle login and authentication
+The back end checks usernames and passwords and decides if a user is allowed in.
+
+2. Process user requests
+When a user searches, uploads a file, or clicks a button, the back end decides what to do.
+
+3. Communicate with databases
+The back end reads and writes data like users, posts, and messages.
+
+4. Enforce permissions and roles
+It decides who is an admin and who is a normal user.
+
+5. Provide APIs
+The back end sends data to the front end in formats like JSON.
+
+6. Integrate external services
+Payments, emails, and notifications are handled here.
+
+ATTACKING WEB APPLICATIONS
+
+Web applications are a huge attack surface because they change often and are accessible from anywhere.
+
+Common web application attacks include:
+
+SQL Injection  
+Bad input handling allows attackers to read or modify database data.
+
+File Inclusion  
+Attackers load files they should not be able to access.
+
+Unrestricted File Upload  
+Uploading malicious files can lead to server takeover.
+
+Broken Access Control  
+Users access features or data they should not have permission to use.
+
+IDOR  
+Changing IDs in URLs to access other users’ data.
+
+Why this matters
+
+One vulnerability can be chained with another.
+Data stolen from one app can be used to attack other systems.
+That is why understanding web applications is critical for penetration testing.
+
+FINAL NOTE
+
+Web applications are not magic.
+They are just systems that take input, process it, and return output.
+Most vulnerabilities come from trusting user input too much.
+
+If you understand how data flows from browser to server to database and back, web hacking becomes logical instead of confusing.
