@@ -41,7 +41,7 @@ Each topic is organized into its own folder for clarity.
 
 ---
 
-## 🛠 Tools Used
+## Tools Used
 
 - cURL
 - Browser Developer Tools
