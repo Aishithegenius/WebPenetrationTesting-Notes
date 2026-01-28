@@ -1,0 +1,305 @@
+# Front-End Web Basics (Clean Notes)
+
+---
+
+## 1. HTML (HyperText Markup Language)
+
+HTML is the **main building block of the front end** of any website. Every web page you see on the internet is built using HTML.
+
+HTML defines the **structure and content** of a web page, such as:
+
+* Headings
+* Paragraphs
+* Images
+* Forms
+* Buttons
+* Links
+
+The browser reads HTML and **renders** it visually for the user.
+
+---
+
+### Basic HTML Example
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+  </head>
+  <body>
+    <h1>A Heading</h1>
+    <p>A Paragraph</p>
+  </body>
+</html>
+```
+
+This displays:
+
+* A browser tab title: **Page Title**
+* A heading: **A Heading**
+* A paragraph: **A Paragraph**
+
+---
+
+### HTML Structure (Tree View)
+
+HTML elements are arranged in a **tree structure**:
+
+```
+document
+ └── html
+     ├── head
+     │   └── title
+     └── body
+         ├── h1
+         └── p
+```
+
+* `<html>` is the root element
+* `<head>` contains metadata (not visible on the page)
+* `<body>` contains visible content
+
+---
+
+### HTML Elements
+
+An HTML element consists of:
+
+* Opening tag
+* Content
+* Closing tag
+
+Example:
+
+```html
+<p>This is a paragraph</p>
+```
+
+Elements can also have **attributes** such as `id` or `class`:
+
+```html
+<p id="para1" class="text">Hello</p>
+```
+
+These attributes are useful for **CSS styling** and **JavaScript interaction**.
+
+---
+
+## 2. CSS (Cascading Style Sheets)
+
+CSS is used to **style and format HTML elements**.
+
+While HTML defines *what* appears on the page, CSS defines *how it looks*.
+
+CSS controls:
+
+* Colors
+* Fonts
+* Sizes
+* Layouts
+* Spacing
+* Animations
+
+---
+
+### CSS Example
+
+```css
+body {
+  background-color: black;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  font-family: helvetica;
+  font-size: 10px;
+}
+```
+
+---
+
+### CSS Syntax
+
+```css
+element {
+  property: value;
+}
+```
+
+Example:
+
+```css
+p {
+  color: red;
+}
+```
+
+Common CSS properties:
+
+* `color`
+* `background-color`
+* `font-size`
+* `text-align`
+* `margin`
+* `padding`
+* `border`
+
+---
+
+### CSS Animations
+
+CSS can create animations using properties such as:
+
+* `@keyframes`
+* `animation`
+* `animation-duration`
+* `animation-direction`
+
+CSS animations can range from simple movements to advanced 3D effects.
+
+---
+
+### CSS Frameworks
+
+CSS frameworks provide **ready-made styles** to speed up development.
+
+Popular CSS frameworks:
+
+* Bootstrap
+* SASS
+* Foundation
+* Bulma
+* Pure
+
+---
+
+## 3. URL Encoding (Percent-Encoding)
+
+URL Encoding is used to convert **unsafe characters** into a format browsers can understand.
+
+URLs only support **ASCII characters**, so special characters must be encoded.
+
+Encoded characters use:
+
+```
+% + two hexadecimal digits
+```
+
+---
+
+### Common URL Encodings
+
+| Character | Encoding |
+| --------- | -------- |
+| space     | %20      |
+| !         | %21      |
+| "         | %22      |
+| #         | %23      |
+| $         | %24      |
+| %         | %25      |
+| &         | %26      |
+| '         | %27      |
+| (         | %28      |
+| )         | %29      |
+
+Example:
+
+* `'` → `%27`
+* space → `%20` or `+`
+
+Tools like **Burp Suite** can encode and decode URLs easily.
+
+---
+
+## 4. DOM (Document Object Model)
+
+The DOM is a **programming interface** that represents the page as a structured object.
+
+The W3C defines DOM as:
+
+> A platform- and language-neutral interface that allows programs to access and modify a document.
+
+DOM types:
+
+* Core DOM
+* XML DOM
+* HTML DOM
+
+Example DOM access:
+
+```javascript
+document.body
+document.head
+document.getElementById("id")
+```
+
+DOM understanding is crucial for:
+
+* JavaScript manipulation
+* Debugging
+* Exploitation (e.g., XSS)
+
+---
+
+## 5. JavaScript
+
+JavaScript adds **functionality and interactivity** to web pages.
+
+Without JavaScript, web pages would be mostly static.
+
+JavaScript is used for:
+
+* Button clicks
+* Form validation
+* Dynamic updates
+* Animations
+* HTTP requests (AJAX)
+
+---
+
+### JavaScript Example
+
+```html
+<script>
+  document.getElementById("button1").innerHTML = "Changed Text!";
+</script>
+```
+
+This changes the content of an HTML element dynamically.
+
+---
+
+### Loading External JavaScript
+
+```html
+<script src="script.js"></script>
+```
+
+---
+
+### JavaScript Frameworks
+
+Frameworks simplify building complex web applications.
+
+Popular JavaScript frameworks:
+
+* React
+* Angular
+* Vue
+* jQuery
+
+---
+
+## ✅ Final Simple Summary (REMEMBER THIS)
+
+* **Front end shows**
+* **Back end decides**
+* **Database remembers**
+* **APIs communicate**
+* **Security checks everything**
+
