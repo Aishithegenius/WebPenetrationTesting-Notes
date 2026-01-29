@@ -1,0 +1,108 @@
+FRONT END SECURITY VULNERABILITIES AND SENSITIVE DATA EXPOSURE
+
+INTRODUCTION
+
+Front end components run in the user’s browser. This means users can view, inspect, and modify front end code. Because of this, front end security is critical even though it does not directly control the server.
+
+If attackers exploit front end vulnerabilities, they can target users, steal sessions, and sometimes gain access to sensitive functionality such as admin panels.
+
+SENSITIVE DATA EXPOSURE
+
+Sensitive Data Exposure happens when confidential information is visible to users in clear text on the client side.
+
+This information is usually found in:
+• HTML source code
+• JavaScript files
+• Developer comments
+• Hidden form fields
+
+Examples include usernames, passwords, API keys, test credentials, hidden URLs, and debugging parameters.
+
+Anyone can view page source using right click and “View Page Source” or Ctrl + U. Even if right click is disabled, the source is still accessible.
+
+DEVELOPER COMMENTS AND TEST CREDENTIALS
+
+Developers sometimes leave comments in HTML during testing.
+
+Example:
+<!-- TODO: remove test credentials test:test -->
+
+This comment shows that test credentials were used and never removed. Since the comment is still present, the credentials may still be valid.
+
+Comments can also expose test pages, admin paths, debugging logic, or unfinished features. Attackers use this information to gain further access.
+
+HTML INJECTION
+
+HTML Injection occurs when user input is displayed on a page without filtering or sanitization.
+
+When the browser receives unfiltered input, it treats it as real HTML instead of text. This allows attackers to inject HTML elements into the page.
+
+HTML Injection can be used to:
+• Insert fake login forms
+• Modify page appearance
+• Display malicious ads
+• Deface websites
+
+HTML INJECTION EXAMPLE
+
+If user input is placed into the page using innerHTML, the browser will render it as HTML.
+
+When sanitization is missing, attackers can inject their own HTML code, changing how the page looks or behaves.
+
+Because this happens on the front end, refreshing the page resets the changes, but the vulnerability still exists.
+
+CROSS SITE SCRIPTING XSS
+
+Cross Site Scripting is a more dangerous form of HTML Injection where JavaScript code is injected and executed in the browser.
+
+JavaScript can:
+• Read cookies
+• Modify page content
+• Perform actions as the logged-in user
+
+TYPES OF XSS
+
+Reflected XSS
+Input is processed and immediately shown on the page, such as search results.
+
+Stored XSS
+Malicious input is stored in the database and executed whenever users view the page.
+
+DOM XSS
+Input is written directly into the DOM and executed entirely in the browser.
+
+XSS IMPACT
+
+Attackers can steal session cookies, hijack accounts, redirect users, or load malicious scripts from external servers.
+
+CROSS SITE REQUEST FORGERY CSRF
+
+CSRF forces users to perform actions on a website while they are logged in, without their consent.
+
+The browser automatically sends cookies with requests, allowing attackers to change passwords or perform admin actions.
+
+If admins are targeted, CSRF may lead to full server compromise.
+
+PREVENTION
+
+User input must be handled securely on both front end and back end.
+
+Sanitization
+Removing dangerous or special characters from input.
+
+Validation
+Ensuring input matches the expected format.
+
+Additional protections include:
+• Anti-CSRF tokens
+• SameSite cookies
+• Re-authentication for sensitive actions
+• Web Application Firewalls
+
+FINAL SIMPLE SUMMARY
+
+Front end shows.
+Back end decides.
+Database remembers.
+APIs communicate.
+Security checks everything.
