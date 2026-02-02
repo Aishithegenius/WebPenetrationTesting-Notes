@@ -1,0 +1,260 @@
+BACK END SERVERS
+
+What a Back End Server Is
+A back end server is the real computer (or virtual computer) that runs everything behind a website or web app. It does the thinking and the work. Users never see it directly.
+
+It belongs to the Data Access Layer because it handles data, logic, and processing.
+
+What Runs on a Back End Server
+The back end server usually runs these main components:
+
+* Web Server
+* Database
+* Development Framework
+
+It may also run:
+
+* Containers (Docker)
+* Virtual machines (hypervisors)
+* Web Application Firewalls (WAFs)
+
+Common Back End Stacks
+A stack is just a common combination of software used together.
+
+Examples:
+
+* LAMP: Linux, Apache, MySQL, PHP
+* WAMP: Windows, Apache, MySQL, PHP
+* WINS: Windows, IIS, .NET, SQL Server
+* MAMP: macOS, Apache, MySQL, PHP
+* XAMPP: Cross‑platform, Apache, MySQL, PHP/Perl
+
+Hardware
+The hardware (CPU, RAM, disk) affects speed and stability. Big websites do not rely on one server. They spread the load across many servers or use cloud providers.
+
+WEB SERVERS
+
+What a Web Server Is
+A web server is a program that listens for HTTP requests from browsers and sends back responses.
+
+It usually listens on:
+
+* Port 80 (HTTP)
+* Port 443 (HTTPS)
+
+What a Web Server Does
+
+* Receives requests from browsers
+* Sends them to the correct page or app logic
+* Returns responses (HTML, JSON, files, errors)
+
+Common HTTP Response Codes
+
+* 200 OK: request succeeded
+* 301 Moved Permanently: URL changed forever
+* 302 Found: URL changed temporarily
+* 400 Bad Request: request is broken
+* 401 Unauthorized: not logged in
+* 403 Forbidden: access denied
+* 404 Not Found: page does not exist
+* 405 Method Not Allowed: wrong HTTP method
+* 408 Request Timeout: request took too long
+* 500 Internal Server Error: server crashed
+* 502 Bad Gateway: invalid response from another server
+* 504 Gateway Timeout: another server did not respond
+
+Web servers handle user input such as:
+
+* Form data
+* JSON
+* File uploads
+
+Popular Web Servers
+
+Apache
+
+* Most common web server
+* Open source
+* Easy to configure
+* Commonly used with PHP
+* Used by startups and some big companies
+
+NGINX
+
+* Very fast and efficient
+* Handles many users at the same time
+* Popular for high‑traffic websites
+* Used by Google, Netflix, Facebook, HTB
+
+IIS
+
+* Made by Microsoft
+* Runs on Windows Server
+* Works very well with .NET and Active Directory
+* Used by large enterprises
+
+Other web servers include:
+
+* Apache Tomcat (Java)
+* Node.js (JavaScript backend)
+
+DATABASES
+
+Why Databases Are Used
+Databases store data such as:
+
+* User accounts
+* Passwords
+* Posts
+* Images
+* Files
+
+They allow websites to be dynamic and personalized.
+
+Main Database Types
+
+Relational Databases (SQL)
+
+* Use tables, rows, and columns
+* Have clear structure
+* Use relationships between tables
+
+Example:
+
+* users table
+* posts table linked by user_id
+
+Key ideas:
+
+* Tables can be linked
+* Structure is strict
+* Very fast for structured data
+
+Common SQL Databases
+
+* MySQL
+* MSSQL
+* PostgreSQL
+* Oracle
+* SQLite
+
+Non‑Relational Databases (NoSQL)
+
+* No tables or fixed structure
+* Very flexible
+* Very scalable
+
+Common NoSQL Models
+
+* Key‑Value
+* Document‑Based
+* Wide‑Column
+* Graph
+
+Key‑Value Example (JSON‑like)
+
+* Key points to data
+* Value can be text, object, or list
+
+Common NoSQL Databases
+
+* MongoDB (Document‑based)
+* ElasticSearch (search‑optimized)
+* Cassandra (high availability)
+* Redis, Neo4j, DynamoDB
+
+Databases in Web Apps
+Web apps connect to databases using code.
+User input is often used in database queries.
+
+If not coded safely, this can cause vulnerabilities like SQL Injection.
+
+DEVELOPMENT FRAMEWORKS
+
+What Frameworks Are
+Frameworks are toolkits that help developers build web apps faster.
+They provide ready‑made features like:
+
+* Login systems
+* Routing
+* Database connections
+
+Popular Frameworks
+
+* Laravel (PHP)
+* Express (Node.js)
+* Django (Python)
+* Ruby on Rails
+
+Large websites usually use more than one framework or service.
+
+APIs AND WEB APIs
+
+What an API Is
+An API is a way for one program to talk to another.
+
+In web apps, APIs let the front end talk to the back end.
+
+Simple idea:
+
+* Front end asks for something
+* Back end processes it
+* Back end sends back a response
+
+Query Parameters
+Data sent through the URL or POST body.
+
+Examples:
+
+* GET /search.php?item=apples
+* POST /search.php with item=apples
+
+Query parameters let one page handle many inputs.
+
+SOAP API
+
+What SOAP Is
+SOAP sends data using XML.
+Both request and response are XML.
+
+SOAP is good for:
+
+* Complex data
+* Structured objects
+* Stateful applications
+
+SOAP drawbacks:
+
+* Hard to read
+* Long and complex
+* Not beginner‑friendly
+
+REST API
+
+What REST Is
+REST uses URLs to represent data.
+It usually returns JSON.
+
+Example:
+
+* GET /users/1
+
+REST ideas:
+
+* Small focused endpoints
+* Simple structure
+* Easy to scale
+
+Common REST HTTP Methods
+
+* GET: read data
+* POST: create data
+* PUT: update or replace data
+* DELETE: remove data
+
+FINAL SIMPLE SUMMARY
+Front end shows
+Back end decides
+Database remembers
+APIs communicate
+Security checks everything
