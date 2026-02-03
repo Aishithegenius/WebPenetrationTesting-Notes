@@ -1,0 +1,162 @@
+COMMON WEB VULNERABILITIES (OWASP TOP 10 CONTEXT)
+
+These are common weaknesses found during web penetration testing. They may come from bad coding, poor input validation, or misconfiguration by developers.
+
+1. Broken Authentication
+   This happens when login systems are weak.
+   Attackers can:
+
+* Log in without valid credentials
+* Take over another user’s session
+* Escalate privileges (normal user → admin)
+
+Example:
+Using payloads like:
+' or 0=0 #
+To bypass login checks.
+
+2. Broken Access Control
+   This happens when users can access things they should not.
+
+Example:
+
+* A normal user accessing /admin
+* Changing URLs to access other users’ data
+
+3. SQL Injection (SQLi)
+   Occurs when user input is directly placed into SQL queries without validation.
+
+Example vulnerable code:
+select * from users where name like '%$input%'
+
+Attackers can:
+
+* Bypass login
+* Read database data
+* Modify or delete records
+
+4. Command Injection
+   Occurs when user input is passed to operating system commands.
+
+Attackers can:
+
+* Execute system commands
+* Gain server control
+
+Example:
+Input like:
+127.0.0.1 | whoami
+
+5. Malicious File Upload
+   Occurs when file uploads are not properly validated.
+
+Attackers can:
+
+* Upload web shells
+* Execute code on the server
+
+Example bypass:
+shell.php.jpg
+
+PUBLIC VULNERABILITIES (CVE)
+
+CVE (Common Vulnerabilities and Exposures) are publicly disclosed security issues.
+
+Why they matter:
+
+* Already discovered
+* Often have ready-made exploits
+* High risk if unpatched
+
+Penetration testing first step:
+
+1. Identify application version
+2. Search for CVEs for that version
+3. Look for high severity (CVSS 8–10)
+
+Useful exploit databases:
+
+* Exploit DB
+* Rapid7
+* Vulnerability Lab
+
+Example:
+CVE-2014-6271
+Category: Command Injection (Shellshock)
+
+CVSS – COMMON VULNERABILITY SCORING SYSTEM
+
+CVSS gives vulnerabilities a score from 0 to 10.
+Higher score = more dangerous.
+
+CVSS v2.0 Severity:
+
+* Low: 0.0 – 3.9
+* Medium: 4.0 – 6.9
+* High: 7.0 – 10.0
+
+CVSS v3.0 Severity:
+
+* None: 0.0
+* Low: 0.1 – 3.9
+* Medium: 4.0 – 6.9
+* High: 7.0 – 8.9
+* Critical: 9.0 – 10.0
+
+Important facts:
+
+* NVD provides Base scores only
+* Temporal and Environmental scores depend on organization context
+
+Example CVE:
+CVE-2017-0144 (EternalBlue)
+CVSS v2.0 Score: 9.3
+
+BACK-END SERVER VULNERABILITIES
+
+Web servers are exposed to the internet, so they are high-value targets.
+
+Examples:
+
+* Apache Shellshock
+* IIS misconfigurations
+
+Other back-end vulnerabilities:
+
+* Database privilege escalation
+* OS-level vulnerabilities
+
+These are often exploited after gaining initial access.
+
+OWASP TOP 10 (INCLUDE IN GITHUB NOTES)
+
+1. Broken Access Control
+2. Cryptographic Failures
+3. Injection (SQLi, Command Injection)
+4. Insecure Design
+5. Security Misconfiguration
+6. Vulnerable and Outdated Components
+7. Identification and Authentication Failures
+8. Software and Data Integrity Failures
+9. Security Logging and Monitoring Failures
+10. Server-Side Request Forgery (SSRF)
+
+NEXT STEPS FOR PRACTICE
+
+1. Set up a web server (Apache / NGINX)
+2. Create basic HTML + CSS
+3. Add JavaScript
+4. Build a simple backend app
+5. Connect to a database
+6. Use APIs
+7. Test for vulnerabilities
+8. Fix the vulnerabilities
+9. Practice on Hack The Box Easy machines
+
+FINAL SIMPLE SUMMARY
+
+Front end shows
+Back end decides
+Database remembers
+APIs communicate
+Security checks everything
